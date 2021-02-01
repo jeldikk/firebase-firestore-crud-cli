@@ -36,12 +36,12 @@ require('firebase/firestore');
     // console.log({key})
      try{
         const collectionRef = firestore.collection(collectionKey)
-        console.log({collectionKey})
+        // console.log({collectionKey})
 
         let atleastOneItem = await collectionRef.limit(1).get();
         // console.log(atleastOneItem)
         
-        return atleastOneItem.find((doc) => doc.exists)
+        return !!atleastOneItem.docs.length
         // return atleastOneItem.exists
      }
      catch(err){
