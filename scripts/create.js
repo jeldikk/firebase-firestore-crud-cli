@@ -14,5 +14,11 @@ for(let item of families){
 console.log("Done creating data")
 
 // createCollectionWithData('users', userList)
-createCollectionWithData('families', itemList)
+// createCollectionWithData('families', itemList)
+
+// doesCollectionExists('users')
+//     .then((result)=>{
+//         console.log(result);
+//     })
+//     .catch((err) => console.log(err))
 

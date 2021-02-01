@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "execute": "node ./scripts/index.js",
-    "create": "node ./scripts/create.js"
+    "create": "node ./scripts/create.js",
+    "read": "node ./scripts/read.js"
   },
   "keywords": [],
   "author": "jeldikk",

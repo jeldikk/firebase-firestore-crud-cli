@@ -38,9 +38,11 @@ require('firebase/firestore');
         const collectionRef = firestore.collection(collectionKey)
         console.log({collectionKey})
 
-        let atleastOneItem = await collectionRef.get();
+        let atleastOneItem = await collectionRef.limit(1).get();
         // console.log(atleastOneItem)
-        return atleastOneItem.exists
+        
+        return atleastOneItem.find((doc) => doc.exists)
+        // return atleastOneItem.exists
      }
      catch(err){
          console.error("Error occured while retrieving collection existance :", err.message)
